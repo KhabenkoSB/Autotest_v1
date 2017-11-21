@@ -33,11 +33,12 @@ public class TestSecond {
                 "<table border=\"1\">\n" +
                 "    <tr>\n" +
                 "        <th>Ячейка 1</th>\n" +
-                "        <th>Ячейка 2</th>\n" +
+                "        <th>N 1</th>\n" +
+                "        <th>N 2</th>\n" +
                 "    </tr>\n" +
                 "    <tr>\n" +
-                "        <td>Значение 1</td>\n" +
-                "        <td>Значение 2</td>\n" +
+                "        <td>Value 1</td>\n" +
+                "        <td>Value 2</td>\n" +
                 "    </tr>\n" +
                 "</table>\n" +
                 "</body>\n" +
