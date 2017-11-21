@@ -46,6 +46,7 @@ public class TestSecond {
                 "</table>\n" +
                 "</body>\n" +
                 "</html>";
+
         reportHTML = readHTML();
 
     }
@@ -56,7 +57,7 @@ public class TestSecond {
     @Test
     public void testUntitled() throws Exception {
         saveHtmlAttach("HTML Report", reportHTML);
-         assert(http.GetCustomerAccountBalances("60659").equals("{\"1CasinoBonusBalanceCustomerCurrency\":0.0,\"CasinoBonusBalanceGBP\":0.0,\"CasinoRealBalanceCustomerCurrency\":0.0,\"CasinoRealBalanceGBP\":0.0,\"OpenBetsBalanceCustomerCurrency\":0.0,\"OpenBetsBalanceGBP\":0.0,\"SportsBalanceCustomerCurrency\":0.0,\"SportsBalanceGBP\":0.0,\"SportsBonusesCustomerGBP\":0.0,\"OpenSportsBonusesCustomerGBP\":0.0,\"SportsBonusesCustomerCurrency\":0.0,\"OpenSportsBonusesCustomerCurrency\":0.0}"));
+         assert(http.GetCustomerAccountBalances("60659").equals("{\"CasinoBonusBalanceCustomerCurrency\":0.0,\"CasinoBonusBalanceGBP\":0.0,\"CasinoRealBalanceCustomerCurrency\":0.0,\"CasinoRealBalanceGBP\":0.0,\"OpenBetsBalanceCustomerCurrency\":0.0,\"OpenBetsBalanceGBP\":0.0,\"SportsBalanceCustomerCurrency\":0.0,\"SportsBalanceGBP\":0.0,\"SportsBonusesCustomerGBP\":0.0,\"OpenSportsBonusesCustomerGBP\":0.0,\"SportsBonusesCustomerCurrency\":0.0,\"OpenSportsBonusesCustomerCurrency\":0.0}"));
     }
 
 
@@ -98,7 +99,7 @@ public class TestSecond {
     }
 
     public String readHTML(){
-        String result = null;
+        String result="";
         BufferedReader reader = null;
         try {
             reader = new BufferedReader(
