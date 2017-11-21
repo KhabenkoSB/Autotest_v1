@@ -2,11 +2,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.qatools.allure.annotations.*;
 
-import javax.swing.text.html.HTML;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.fail;
 import static ru.yandex.qatools.allure.model.SeverityLevel.NORMAL;
@@ -16,13 +13,14 @@ public class TestSecond {
      private boolean acceptNextAlert = true;
      private StringBuffer verificationErrors = new StringBuffer();
      private String reportHTML;
-
+     private HttpURLConnection http = new HttpURLConnection();
 
 
 
     @Before
     @Step("Before method is done")
     public void setUp() throws Exception {
+
         reportHTML = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
@@ -32,7 +30,6 @@ public class TestSecond {
                 "<body>\n" +
                 "<table border=\"1\">\n" +
                 "    <tr>\n" +
-                "        <th>Ячейка 1</th>\n" +
                 "        <th>N 1</th>\n" +
                 "        <th>N 2</th>\n" +
                 "    </tr>\n" +
@@ -52,7 +49,6 @@ public class TestSecond {
     @Test
     public void testUntitled() throws Exception {
         saveHtmlAttach("HTML Report", reportHTML);
-
 
     }
 
@@ -76,7 +72,6 @@ public class TestSecond {
             return false;
         }
     }
-
 
 
     @Attachment(value = "{0}", type = "text/html")
