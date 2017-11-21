@@ -5,12 +5,18 @@ import org.openqa.selenium.*;
 import ru.yandex.qatools.allure.annotations.*;
 
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.fail;
 import static ru.yandex.qatools.allure.model.SeverityLevel.NORMAL;
 
 @Title("Test suite")
 public class TestSecond {
-     private boolean acceptNextAlert = true;
      private StringBuffer verificationErrors = new StringBuffer();
      private String reportHTML;
      private HttpURLConnection http = new HttpURLConnection();
@@ -40,6 +46,7 @@ public class TestSecond {
                 "</table>\n" +
                 "</body>\n" +
                 "</html>";
+        reportHTML = readHTML();
 
     }
 
@@ -49,7 +56,7 @@ public class TestSecond {
     @Test
     public void testUntitled() throws Exception {
         saveHtmlAttach("HTML Report", reportHTML);
-
+         assert(http.GetCustomerAccountBalances("60659").equals("{\"1CasinoBonusBalanceCustomerCurrency\":0.0,\"CasinoBonusBalanceGBP\":0.0,\"CasinoRealBalanceCustomerCurrency\":0.0,\"CasinoRealBalanceGBP\":0.0,\"OpenBetsBalanceCustomerCurrency\":0.0,\"OpenBetsBalanceGBP\":0.0,\"SportsBalanceCustomerCurrency\":0.0,\"SportsBalanceGBP\":0.0,\"SportsBonusesCustomerGBP\":0.0,\"OpenSportsBonusesCustomerGBP\":0.0,\"SportsBonusesCustomerCurrency\":0.0,\"OpenSportsBonusesCustomerCurrency\":0.0}"));
     }
 
 
@@ -74,6 +81,12 @@ public class TestSecond {
     }
 
 
+
+
+
+
+
+
     @Attachment(value = "{0}", type = "text/html")
     public static String saveHtmlAttach(String attachName, String html) {
         return html;
@@ -82,6 +95,33 @@ public class TestSecond {
     @Attachment(value = "{0}", type = "text/plain")
     public static String saveTextLog(String attachName, String message) {
         return message;
+    }
+
+    public String readHTML(){
+        String result = null;
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream("src\\main\\resources\\report.html"), Charset.forName("UTF-8")));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+                result+=line;
+            }
+        } catch (IOException e) {
+            // log error
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    // log warning
+                }
+            }
+        }
+
+        return result;
     }
 
 }
