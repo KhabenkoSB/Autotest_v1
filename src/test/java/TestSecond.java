@@ -71,18 +71,18 @@ public class TestSecond {
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
-    @Title("/DemoSimpleCalculationsMicroservice/v3")
+    @Title("DemoSimpleCalculationsMicroservice")
     @Test
     public void test3() throws Exception {
-        assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice/v3")==true);
+        assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice")==true);
           saveHtmlAttach("HTML Report", reportHTML);
 
     }
 
-    @Title("/DemoSimpleCalculationsMicroservice/v2")
+    @Title("/DemoExceptionThrowingMicroservice")
     @Test
     public void test4() throws Exception {
-        assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice/v2")==true);
+        assertTrue(http.healthCheck("/DemoExceptionThrowingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
