@@ -26,7 +26,7 @@ public class TestFirst {
 
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "https://www.ukr.net/";
+        baseUrl = "http://kyiv-win-inf01:9998/routes";
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
