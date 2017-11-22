@@ -9,7 +9,7 @@ import ru.yandex.qatools.allure.annotations.Title;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.fail;
-
+@Title("Test suite 1")
 public class TestFirst {
     private WebDriver driver;
     private String baseUrl;
@@ -30,7 +30,7 @@ public class TestFirst {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
-    @Title("Test suite №2")
+
     @Test
     public void testUntitled() throws Exception {
 

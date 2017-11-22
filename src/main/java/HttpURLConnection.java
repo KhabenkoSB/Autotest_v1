@@ -9,8 +9,10 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.xerces.dom3.as.ASElementDeclaration;
 import org.junit.Assert;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.HashMap;
+
 
 public class HttpURLConnection {
 

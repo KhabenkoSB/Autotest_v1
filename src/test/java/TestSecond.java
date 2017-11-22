@@ -12,10 +12,11 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static ru.yandex.qatools.allure.model.SeverityLevel.NORMAL;
 
-@Title("Test suite №1")
+@Title("Test suite 2")
 public class TestSecond {
      private StringBuffer verificationErrors = new StringBuffer();
      private String reportHTML;
@@ -24,7 +25,7 @@ public class TestSecond {
 
 
     @Before
-    @Step("Before method is done")
+  //  @Step("Before method is done")
     public void setUp() throws Exception {
 
         /*
@@ -52,20 +53,55 @@ public class TestSecond {
 
     }
 
-    @Title("First test in suite")
+    @Title("HealthCheck")
     @Description("In this test we will test....")
     @Severity(NORMAL)
     @Test
-    public void testUntitled() throws Exception {
-        assert (http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+    public void test1() throws Exception {
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        saveHtmlAttach("HTML Report", reportHTML);
+
+    }
+
+    @Test
+    public void test2() throws Exception {
+
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        saveHtmlAttach("HTML Report", reportHTML);
+
+    }
+    @Test
+    public void test3() throws Exception {
+
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        saveHtmlAttach("HTML Report", reportHTML);
+
+    }
+    @Test
+    public void test4() throws Exception {
+
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
 
 
 
+
     @After
-    @Step("After method is done")
+  //  @Step("After method is done")
     public void tearDown() throws Exception {
 
         String verificationErrorString = verificationErrors.toString();
