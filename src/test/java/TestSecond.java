@@ -15,7 +15,7 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.fail;
 import static ru.yandex.qatools.allure.model.SeverityLevel.NORMAL;
 
-@Title("Test suite")
+@Title("Test suite №1")
 public class TestSecond {
      private StringBuffer verificationErrors = new StringBuffer();
      private String reportHTML;
