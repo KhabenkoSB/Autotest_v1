@@ -16,7 +16,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static ru.yandex.qatools.allure.model.SeverityLevel.NORMAL;
 
-@Title("Test suite 2")
+@Title("HealthCheck")
 public class TestSecond {
      private StringBuffer verificationErrors = new StringBuffer();
      private String reportHTML;
@@ -53,46 +53,36 @@ public class TestSecond {
 
     }
 
-    @Title("HealthCheck")
+    @Title("Sql/DemoAccountingMicroservice")
     @Description("In this test we will test....")
     @Severity(NORMAL)
     @Test
     public void test1() throws Exception {
         assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
 
+    @Title("/Mongo/DemoAccountingMicroservice")
     @Test
     public void test2() throws Exception {
 
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("/Mongo/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
+    @Title("/DemoSimpleCalculationsMicroservice/v3")
     @Test
     public void test3() throws Exception {
-
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        saveHtmlAttach("HTML Report", reportHTML);
+        assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice/v3")==true);
+          saveHtmlAttach("HTML Report", reportHTML);
 
     }
+
+    @Title("/DemoSimpleCalculationsMicroservice/v2")
     @Test
     public void test4() throws Exception {
-
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
-        assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
+        assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice/v2")==true);
         saveHtmlAttach("HTML Report", reportHTML);
 
     }
