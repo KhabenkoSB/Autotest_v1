@@ -8,12 +8,15 @@ public class Main {
     public static void main(String[] args) {
         HttpURLConnection http = new HttpURLConnection();
         try {
-            http.GetCustomerAccountBalances("60659");
-            http.GetCustomerLastTransaction("60659");
+         //   http.GetCustomerAccountBalances("60659");
+        //    http.GetCustomerLastTransaction("60659");
+            http.healthCheck("Sql/DemoAccountingMicroservice");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(readHTML());
+    //    System.out.println(readHTML());
+
+
     }
 
 

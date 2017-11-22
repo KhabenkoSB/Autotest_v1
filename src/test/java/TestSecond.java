@@ -27,6 +27,7 @@ public class TestSecond {
     @Step("Before method is done")
     public void setUp() throws Exception {
 
+        /*
         reportHTML = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
@@ -46,7 +47,7 @@ public class TestSecond {
                 "</table>\n" +
                 "</body>\n" +
                 "</html>";
-
+*/
         reportHTML = readHTML();
 
     }
@@ -56,8 +57,9 @@ public class TestSecond {
     @Severity(NORMAL)
     @Test
     public void testUntitled() throws Exception {
+        assert (http.healthCheck("Sql/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
-         assert(http.GetCustomerAccountBalances("60659").equals("{\"CasinoBonusBalanceCustomerCurrency\":0.0,\"CasinoBonusBalanceGBP\":0.0,\"CasinoRealBalanceCustomerCurrency\":0.0,\"CasinoRealBalanceGBP\":0.0,\"OpenBetsBalanceCustomerCurrency\":0.0,\"OpenBetsBalanceGBP\":0.0,\"SportsBalanceCustomerCurrency\":0.0,\"SportsBalanceGBP\":0.0,\"SportsBonusesCustomerGBP\":0.0,\"OpenSportsBonusesCustomerGBP\":0.0,\"SportsBonusesCustomerCurrency\":0.0,\"OpenSportsBonusesCustomerCurrency\":0.0}"));
+
     }
 
 
