@@ -1,6 +1,7 @@
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ru.yandex.qatools.allure.annotations.*;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -19,7 +20,10 @@ public class CalcTest {
         this.secondParameter = secondParameter;
         this.expectedResult = expectedResult;
     }
-
+    
+    @Stories("MyStory")
+    @Issue("IS-2132")
+    @Features("F1")
     @Test
     public void checkCalculator() {
         Calculator calculator = new Calculator(firstParameter, secondParameter);
