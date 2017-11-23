@@ -24,7 +24,7 @@ public class CalcTest {
     public void checkCalculator() {
         Calculator calculator = new Calculator(firstParameter, secondParameter);
         int result = calculator.getResult();
-        assertTrue("Результат(" + result + ") не равен " + expectedResult, result == expectedResult);
+        assertTrue("Result(" + result + ") isn't equal " + expectedResult, result == expectedResult);
     }
 
     @Parameterized.Parameters
