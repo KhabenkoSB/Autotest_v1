@@ -27,7 +27,6 @@ public class TestSecond {
     @Before
   //  @Step("Before method is done")
     public void setUp() throws Exception {
-
         /*
         reportHTML = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
@@ -51,6 +50,8 @@ public class TestSecond {
 */
         reportHTML = readHTML();
 
+
+
     }
 
     @Title("Sql/DemoAccountingMicroservice")
@@ -60,7 +61,6 @@ public class TestSecond {
     public void test1() throws Exception {
         assertTrue(http.healthCheck("Sql/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
-
     }
 
     @Title("Mongo/DemoAccountingMicroservice")
@@ -69,14 +69,13 @@ public class TestSecond {
 
         assertTrue(http.healthCheck("/Mongo/DemoAccountingMicroservice")==true);
         saveHtmlAttach("HTML Report", reportHTML);
-
     }
+
     @Title("DemoSimpleCalculationsMicroservice")
     @Test
     public void test3() throws Exception {
         assertTrue(http.healthCheck("/DemoSimpleCalculationsMicroservice")==true);
           saveHtmlAttach("HTML Report", reportHTML);
-
     }
 
     @Title("DemoExceptionThrowingMicroservice")
