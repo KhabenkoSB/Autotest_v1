@@ -63,7 +63,7 @@ public class TestSecond {
 
     }
 
-    @Title("/Mongo/DemoAccountingMicroservice")
+    @Title("Mongo/DemoAccountingMicroservice")
     @Test
     public void test2() throws Exception {
 
@@ -79,7 +79,7 @@ public class TestSecond {
 
     }
 
-    @Title("/DemoExceptionThrowingMicroservice")
+    @Title("DemoExceptionThrowingMicroservice")
     @Test
     public void test4() throws Exception {
         assertTrue(http.healthCheck("/DemoExceptionThrowingMicroservice")==true);
