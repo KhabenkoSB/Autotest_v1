@@ -20,10 +20,10 @@ public class CalcTest {
         this.secondParameter = secondParameter;
         this.expectedResult = expectedResult;
     }
-    
+
     @Stories("MyStory")
-    @Issue("IS-2132")
-    @Features("F1")
+    @Issue("PAAS-2046")
+    @Features("Features-F1")
     @Test
     public void checkCalculator() {
         Calculator calculator = new Calculator(firstParameter, secondParameter);
