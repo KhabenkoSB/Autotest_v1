@@ -25,13 +25,13 @@ public class Test10Bet {
     @Before
     public void setUp() throws Exception {
 
+/*
        System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\geckodriver.exe");
        driver = new FirefoxDriver();
+*/
 
-
-
-     //   System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
-     //   driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver2.exe");
+        driver = new ChromeDriver();
         baseUrl = "https://www.10bet.com";
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     }
