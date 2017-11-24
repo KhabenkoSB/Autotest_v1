@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9fc89d-846c-49d9-b2a9-7017be76060e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Test10Bet.java" afterPath="$PROJECT_DIR$/src/test/java/Test10Bet.java" />
-    </list>
+    <list default="true" id="3a9fc89d-846c-49d9-b2a9-7017be76060e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -353,12 +351,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 10h 02m 30s.xml">
-      <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 10h 07m 14s.xml">
-      <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 10h 07m 39s.xml">
       <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
     </history-entry>
@@ -381,6 +373,12 @@
       <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 10h 52m 50s.xml">
+      <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 11h 00m 37s.xml">
+      <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test10Bet_testUntitled - 2017.11.24 at 11h 00m 54s.xml">
       <configuration name="Test10Bet.testUntitled" configurationId="JUnit" />
     </history-entry>
   </component>
