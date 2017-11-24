@@ -32,7 +32,7 @@ public class Test10Bet {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         baseUrl = "https://www.10bet.com";
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     }
 
     @Title("Place 1 single ")
@@ -70,6 +70,7 @@ public class Test10Bet {
 
     @After
     public void tearDown() throws Exception {
+        makeScreenshot();
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
