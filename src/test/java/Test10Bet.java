@@ -34,7 +34,7 @@ public class Test10Bet {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver2.exe");
         driver = new ChromeDriver();
         baseUrl = "https://www.10bet.com";
-        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Title("Place 1 single ")
@@ -44,6 +44,16 @@ public class Test10Bet {
         String myBett;
         driver.manage().window().maximize();
         driver.get(baseUrl + "/");
+        driver.get(baseUrl + "/sports/");
+        driver.findElement(By.id("NewHeaderUsername")).clear();
+        driver.findElement(By.id("NewHeaderUsername")).sendKeys("Khabenko");
+        driver.findElement(By.id("NewHeaderPassword")).click();
+        driver.findElement(By.id("NewHeaderPassword")).clear();
+        driver.findElement(By.id("NewHeaderPassword")).sendKeys("Sbtech1!");
+        driver.findElement(By.id("NewHeaderLoginButton")).click();
+        driver.findElement(By.cssSelector("span.pointsOdds")).click();
+     
+        /*
         driver.get(baseUrl + "/sports/");
         driver.findElement(By.id("NewHeaderUsername")).click();
         driver.findElement(By.id("NewHeaderUsername")).clear();
@@ -63,7 +73,11 @@ public class Test10Bet {
         myBett = driver.findElement(By.cssSelector("span.myBetsLine__pick")).getText();
        // makeScreenshot();
       //  assertEquals(bett, myBett);
-        assertTrue(myBett.contains(bett));
+
+      */
+      //  assertTrue(myBett.contains(bett));
+        makeScreenshot();
+
 
 
 
@@ -73,7 +87,6 @@ public class Test10Bet {
 
     @After
     public void tearDown() throws Exception {
-        makeScreenshot();
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
