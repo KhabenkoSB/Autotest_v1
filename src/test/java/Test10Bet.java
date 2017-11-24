@@ -11,6 +11,7 @@ import ru.yandex.qatools.allure.annotations.Title;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 
@@ -46,10 +47,10 @@ public class Test10Bet {
         driver.get(baseUrl + "/sports/");
         driver.findElement(By.id("NewHeaderUsername")).click();
         driver.findElement(By.id("NewHeaderUsername")).clear();
-        driver.findElement(By.id("NewHeaderUsername")).sendKeys("croatia");
+        driver.findElement(By.id("NewHeaderUsername")).sendKeys("Khabenko");
         driver.findElement(By.id("NewHeaderPassword")).click();
         driver.findElement(By.id("NewHeaderPassword")).clear();
-        driver.findElement(By.id("NewHeaderPassword")).sendKeys("350355");
+        driver.findElement(By.id("NewHeaderPassword")).sendKeys("Sbtech1!");
         driver.findElement(By.id("NewHeaderLoginButton")).click();
         driver.findElement(By.cssSelector("span.place")).click();
         bett = driver.findElement(By.cssSelector("span.place")).getText();
@@ -61,7 +62,8 @@ public class Test10Bet {
         driver.findElement(By.cssSelector("span.myBetsLine__pick")).click();
         myBett = driver.findElement(By.cssSelector("span.myBetsLine__pick")).getText();
         makeScreenshot();
-        assertEquals(bett, myBett);
+    //    assertEquals(bett, myBett);
+        assertTrue(myBett.contains(bett));
 
 
 
