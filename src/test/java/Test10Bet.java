@@ -61,8 +61,8 @@ public class Test10Bet {
       //  driver.findElement(By.cssSelector("div.myBetsLine__details")).click();
         driver.findElement(By.cssSelector("span.myBetsLine__pick")).click();
         myBett = driver.findElement(By.cssSelector("span.myBetsLine__pick")).getText();
-        makeScreenshot();
-    //    assertEquals(bett, myBett);
+       // makeScreenshot();
+      //  assertEquals(bett, myBett);
         assertTrue(myBett.contains(bett));
 
 
