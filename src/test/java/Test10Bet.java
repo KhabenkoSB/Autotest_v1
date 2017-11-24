@@ -57,7 +57,7 @@ public class Test10Bet {
         driver.findElement(By.id("stake_0")).sendKeys("1");
         driver.findElement(By.id("PlaceBetButton")).click();
         driver.findElement(By.id("betting_slip_mybetstab")).click();
-        driver.findElement(By.cssSelector("div.myBetsLine__details")).click();
+      //  driver.findElement(By.cssSelector("div.myBetsLine__details")).click();
         driver.findElement(By.cssSelector("span.myBetsLine__pick")).click();
         myBett = driver.findElement(By.cssSelector("span.myBetsLine__pick")).getText();
         makeScreenshot();
