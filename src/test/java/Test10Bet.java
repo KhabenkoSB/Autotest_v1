@@ -51,8 +51,8 @@ public class Test10Bet {
         driver.findElement(By.id("NewHeaderPassword")).clear();
         driver.findElement(By.id("NewHeaderPassword")).sendKeys("350355");
         driver.findElement(By.id("NewHeaderLoginButton")).click();
-        bett = driver.findElement(By.cssSelector("span.place")).getText();
         driver.findElement(By.cssSelector("span.place")).click();
+        bett = driver.findElement(By.cssSelector("span.place")).getText();
         driver.findElement(By.id("stake_0")).clear();
         driver.findElement(By.id("stake_0")).sendKeys("1");
         driver.findElement(By.id("PlaceBetButton")).click();
@@ -74,6 +74,7 @@ public class Test10Bet {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
+            makeScreenshot();
             fail(verificationErrorString);
         }
     }
@@ -83,6 +84,7 @@ public class Test10Bet {
             driver.findElement(by);
             return true;
         } catch (NoSuchElementException e) {
+            makeScreenshot();
             return false;
         }
     }
@@ -90,6 +92,7 @@ public class Test10Bet {
     private boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
+            makeScreenshot();
             return true;
         } catch (NoAlertPresentException e) {
             return false;
