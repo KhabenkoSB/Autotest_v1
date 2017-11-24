@@ -9,4 +9,6 @@ public class HealthCheck {
     public String getMessage() {
         return Message;
     }
+
+
 }
