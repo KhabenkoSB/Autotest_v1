@@ -32,6 +32,7 @@ public class Test10Bet {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         baseUrl = "https://www.10bet.com";
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
@@ -43,7 +44,6 @@ public class Test10Bet {
 
         driver.get(baseUrl + "/");
         driver.get(baseUrl + "/sports/");
-//        driver.manage().window().maximize();
         driver.findElement(By.id("NewHeaderUsername")).click();
         driver.findElement(By.id("NewHeaderUsername")).clear();
         driver.findElement(By.id("NewHeaderUsername")).sendKeys("croatia");
