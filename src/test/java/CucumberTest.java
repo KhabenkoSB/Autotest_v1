@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/features",
-        glue = "Steps",
+        glue = "",
         tags = "@withdrawal",
         snippets = SnippetType.CAMELCASE
 )
