@@ -51,11 +51,12 @@ public class Steps {
         driver.get(baseUrl + "/sports/");
         driver.findElement(By.id("NewHeaderUsername")).clear();
         driver.findElement(By.id("NewHeaderUsername")).sendKeys("Khabenko");
+        makeScreenshot();
         driver.findElement(By.id("NewHeaderPassword")).click();
         driver.findElement(By.id("NewHeaderPassword")).clear();
         driver.findElement(By.id("NewHeaderPassword")).sendKeys("Sbtech1!");
         driver.findElement(By.id("NewHeaderLoginButton")).click();
-        makeScreenshot();
+
     }
 
     @Then("^I can see balase$")
@@ -76,9 +77,9 @@ public class Steps {
 
 
 
-
     @Attachment(type = "image/png")
     public byte[] makeScreenshot() {
+        System.out.println("Скриншот сделан");
             return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
