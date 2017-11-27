@@ -3,7 +3,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.java.ru.*;
-import org.junit.Before;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -68,17 +69,9 @@ public class Steps {
     public void iCanSeeError() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         driver.manage().window().maximize();
-        driver.get(baseUrl + "/");
-        driver.get(baseUrl + "/sports/");
-        driver.findElement(By.id("NewHeaderUsername")).clear();
-        driver.findElement(By.id("NewHeaderUsername")).sendKeys("Khabenko");
-        driver.findElement(By.id("NewHeaderPassword")).click();
-        driver.findElement(By.id("NewHeaderPassword")).clear();
-        driver.findElement(By.id("NewHeaderPassword")).sendKeys("Sbtech1!");
-        driver.findElement(By.id("NewHeaderLoginButton")).click();
-        makeScreenshot();
+            makeScreenshot();
         System.out.println("4");
-        makeScreenshot();
+
    }
 
 
@@ -86,7 +79,7 @@ public class Steps {
 
     @Attachment(type = "image/png")
     public byte[] makeScreenshot() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
 
