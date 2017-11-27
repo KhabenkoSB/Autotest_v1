@@ -52,7 +52,7 @@ public class Test10Bet {
         driver.findElement(By.id("NewHeaderPassword")).sendKeys("Sbtech1!");
         driver.findElement(By.id("NewHeaderLoginButton")).click();
         driver.findElement(By.cssSelector("span.pointsOdds")).click();
-     
+
         /*
         driver.get(baseUrl + "/sports/");
         driver.findElement(By.id("NewHeaderUsername")).click();
