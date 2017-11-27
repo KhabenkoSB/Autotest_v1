@@ -5,8 +5,7 @@ import org.junit.runner.RunWith;
 import ru.yandex.qatools.allure.annotations.Stories;
 import ru.yandex.qatools.allure.annotations.Title;
 
-@Stories("Test Cucumber")
-@Title("Test Cucumber")
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/features",
@@ -15,7 +14,8 @@ import ru.yandex.qatools.allure.annotations.Title;
         snippets = SnippetType.CAMELCASE
 )
 
-
+@Stories("Test Cucumber")
+@Title("Test Cucumber")
 public class CucumberTest {
 
 
